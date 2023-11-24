@@ -1,0 +1,50 @@
+## Cadastrar Usuário
+POST http://localhost:3000/cadastrar
+Content-Type: application/json
+
+{
+  "nome":"teste", 
+  "email": "teste@teste.com", 
+  "senha":"teste"
+}
+
+###Login
+
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+  "email": "teste@teste.com", 
+  "senha":"teste"
+}
+
+### Cadastro de pokemon
+POST http://localhost:3000/pokemon
+Content-Type: application/json
+authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNzAwNzg2MzM3LCJleHAiOjE3MDA4MTUxMzd9.aiq_MXUHKhY92zO3ljvgxxjXhvnEPCB75DMX-BOzo4k
+
+{
+  "nome": "Charizard",
+  "habilidades": "fogo",
+  "imagem": "****",
+  "apelido": "Chariza"
+}
+
+### Listar Todos os pokemons
+GET http://localhost:3000/pokemon
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzAwNzkxNDI0LCJleHAiOjE3MDA4MjAyMjR9.enaqEz5aDvBC_hRojRS5uc8YHujtM9050nFRuCfK-vM
+
+
+### Atualizar Pokemon
+PATCH http://localhost:3000/pokemon/3
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6OCwiaWF0IjoxNzAwNzg2MjM5LCJleHAiOjE3MDA4MTUwMzl9.vtkTR0HeyUATc1cudfCweZtwubVF5rPKOxawSM9aG7c
+{
+  "apelido": "chamandinho"
+}
+
+
+
+### Deletar pokemons
+DELETE  http://localhost:3000/pokemon/2
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwiaWF0IjoxNzAwNzg2NDEyLCJleHAiOjE3MDA4MTUyMTJ9.YQA2bNtvfRw70bC8WFwiS17cH6e2HVt-nDe19jigCPc
